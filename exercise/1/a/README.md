@@ -6,7 +6,8 @@ We base this tutorial on the first exercise located in `/exercise/1/a`.
 
 > **TLDR**: Compile application and run AFL++
 >```bash
->clang -o target main.c
+>clang -o target main.c or
+>gcc -o target main.c -std=c99 -D_GNU_SOURCE -fno-builtin -w
 >afl-fuzz -n -i input_directory -o output_directory -- /path/to/application
 >```
 
